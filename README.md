@@ -14,6 +14,6 @@ It has 3 modes,
 
 **I** - _Input_ - Read Serial input sent by the device. This is used for recording the IR signal.
 
-**O** - _Output_ - Select from stores signals and send a specific command to the device to generate a signal.
+**O** - _Output_ - Select from stored signals and send a specific command to the device to generate a signal.
 
 **J** - _Jammer_ - Send a burst of 38kHz noise. No other device in the vicinity will work. _Works better if the device has high watt multi-directional LED array configuration._
