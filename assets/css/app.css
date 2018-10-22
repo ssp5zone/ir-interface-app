@@ -1,0 +1,148 @@
+html, body {
+  background: #f3efef;
+  text-align: center;
+  font-family: 'fontello';
+  border: 6px solid #f3efef;
+  height: 100%;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.button {
+  display: inline-block;
+  border: 0;
+  outline: none;
+  vertical-align: middle;
+  -webkit-transform: scale(1.25);
+  /*margin: 110px 30px;*/
+  margin: 60px 30px;
+  width: 60px;
+  height: 60px;
+  line-height: 2.6;
+  font-size: 24px;
+  color: #e1dada;
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
+  text-decoration: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e3e3e3));
+  background-image: -moz-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e3e3e3));
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 10px 10px 15px #e3e3e3, -10px 10px 15px #e3e3e3, -15px -15px 15px rgba(255, 255, 255, 0.4), 15px -15px 15px rgba(255, 255, 255, 0.4), inset 0px 2px 0px #fff;
+  transition: box-shadow 0.3s ease-in-out,  background-image 0.3s ease-in-out, text-shadow 0.5s linear, color 0.5s linear;
+  -webkit-transition: box-shadow 0.3s ease-in-out,  background-image 0.3s ease-in-out, text-shadow 0.5s linear, color 0.5s linear;
+  -moz-transition: box-shadow 0.3s ease-in-out,  background-image 0.3s ease-in-out, text-shadow 0.5s linear, color 0.5s linear;  
+}
+.button.active {
+  color: #00d0b0;
+  text-shadow: 0px 0px 7px #37ffb1;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e3e3e3), color-stop(100%, #f4f4f4));
+  background-image: -moz-gradient(linear, left top, left bottom, color-stop(0%, #e3e3e3), color-stop(100%, #f4f4f4));
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15), 10px 10px 15px rgba(255, 255, 255, 0.4), -10px 10px 15px rgba(255, 255, 255, 0.4), -10px -10px 15px #e3e3e3, 10px -10px 15px #e3e3e3, inset 0px -3px 0px rgba(255, 255, 255, 0.4), inset 0px 3px 3px rgba(0, 0, 0, 0.04);
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 100px;  
+  transition: height 1s ease-in-out;
+}
+.button-container.fullscreen {
+  height: 100%;
+}
+.button-container.column {
+  flex-direction: column;
+}
+.button-container .button {
+   margin: 46px auto;
+}
+
+
+/**
+* Main container --STARTS
+*/
+.main-wrapper {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+.content{
+  /*flex: 1 1 auto;*/
+    flex-shrink: 1000000;
+    overflow: hidden;
+}
+/**
+* Main container --ENDS
+*/
+
+
+/**
+* Some Animation -- STARTS
+*/
+@keyframes blink {
+  0% {
+    color: #e1dada;
+    text-shadow: 0px  0px 1px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    color: #00d0b0;
+    text-shadow: 0px -1px 7px #37ffb1;
+  }
+  100% {
+    color: #e1dada;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  }
+}
+.blink {
+  animation: blink 1s step-start 0s infinite;
+}
+@keyframes buttons-up {
+    0%   { flex-direction: column; }
+    5%   { flex-direction: row; }
+    10%  { height: 100%; }
+    100% { height: 100px; }
+}
+/**
+* Some Animation -- ENDS
+*/
+
+
+/**
+* JQuery Mobile Override -- STARTS
+*/
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+    background-color: transparent;
+    border-color: transparent;
+    overflow: auto;
+}
+.ui-mobile .ui-page {
+    height: 100%;
+    position: relative;
+    min-height: 1px !important; /* dynamic height fix */
+}
+.ui-content .ui-listview-inset, .ui-panel-inner>.ui-listview-inset {
+    margin: 0;
+}
+.ui-content {
+  padding: 0px;
+}
+/**
+* JQuery Mobile Override -- ENDS
+*/
+
+
+
+/**
+* Custom styling -- STARTS
+*/
+li.back>a {
+  background-color: honeydew !important;
+  /*background-color: paleturquoise !important;
+  background-color: turquoise !important;*/
+}
+/**
+* Custom styling -- ENDS
+*/

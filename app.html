@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" type="text/css" href="./assets/css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/app.css">    
+    <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/js/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="./assets/js/app.js"></script>
+    <script type="text/javascript" src="file:///android_asset/app.js"></script>
+    <script type="text/javascript">
+      $.mobile.ignoreContentEnabled = true;
+    </script>
+  </head>
+
+  <body>
+    <div class="main-wrapper" >
+
+      <div class="button-container fullscreen column" data-enhance="false">
+        <button id="read" class="button">I</button>
+        <button id="write" class="button">O</button>
+        <button id="jam" class="button">J</button>
+      </div>    
+
+      <div class="content" data-enhance="true">
+
+        <div data-role="page" id="i-page">
+          <div data-role="header">
+            <h1>Work in progress...</h1>
+          </div>
+          <div data-role="main" class="ui-content">
+            <a href="#o-page">Slide to Page Two</a>
+          </div>
+        </div>
+
+        <div data-role="page" id="o-page">
+          <div data-role="main" class="ui-content">
+            <ul data-role="listview" data-autodividers="true" data-inset="true">
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>    
+  </body>
+
+</html>
